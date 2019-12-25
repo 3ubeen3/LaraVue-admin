@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//For handling the VUE Routes add code
+Route::get('{path}',"Homecontroller@index")->where('path','([A-z\d-\/_.]+)?');
